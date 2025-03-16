@@ -8,6 +8,25 @@ The scope of the project includes collecting and analyzing relevant datasets, id
 
 This document outlines the methodology, data sources, model selection, implementation details, and performance evaluation criteria used to build the DoorDash Delivery Estimator. The results of this project can provide insights into optimizing delivery networks and offer potential improvements for food delivery platforms.
 
-
 ## Data Description
 
+This table describes the dataset columns and their respective data types.
+
+| Column Name                                    | Data Type   | Description |
+|-----------------------------------------------|------------|-------------|
+| `market_id`                                   | Integer    | Unique identifier for the market (region) where the order was placed. |
+| `created_at`                                  | Timestamp  | Timestamp indicating when the order was created. |
+| `actual_delivery_time`                        | Timestamp  | Timestamp indicating when the order was actually delivered. |
+| `store_id`                                    | Integer    | Unique identifier for the store fulfilling the order. |
+| `store_primary_category`                      | String     | The primary category/type of the store (e.g., restaurant, grocery, etc.). |
+| `order_protocol`                              | Integer    | Protocol used for order placement (e.g., API, manual entry, etc.). |
+| `total_items`                                 | Integer    | Total number of items in the order. |
+| `subtotal`                                    | Float      | Total cost of the order before taxes, fees, and tips (in cents or dollars). |
+| `num_distinct_items`                          | Integer    | Number of unique items in the order. |
+| `min_item_price`                              | Float      | Price of the cheapest item in the order. |
+| `max_item_price`                              | Float      | Price of the most expensive item in the order. |
+| `total_onshift_dashers`                       | Integer    | Number of dashers (delivery drivers) currently on shift in the market at the time of the order. |
+| `total_busy_dashers`                          | Integer    | Number of dashers currently assigned to deliveries at the time of the order. |
+| `total_outstanding_orders`                    | Integer    | Number of active (unfulfilled) orders in the market at the time of the order. |
+| `estimated_order_place_duration`              | Float      | Estimated time (in seconds or minutes) for the restaurant to confirm and prepare the order. |
+| `estimated_store_to_consumer_driving_duration`| Float      | Estimated driving time (in seconds or minutes) from the store to the customer's location. |
