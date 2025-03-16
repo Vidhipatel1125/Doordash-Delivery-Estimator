@@ -8,6 +8,22 @@ The scope of the project includes collecting and analyzing relevant datasets, id
 
 This document outlines the methodology, data sources, model selection, implementation details, and performance evaluation criteria used to build the DoorDash Delivery Estimator. The results of this project can provide insights into optimizing delivery networks and offer potential improvements for food delivery platforms.
 
+## Objective 
+The primary objective of this project is to develop a predictive model that accurately estimates delivery times for DoorDash orders. By leveraging historical data and machine learning techniques, the model will predict how long it will take for an order to be delivered from the time it is placed. The goal is to improve the accuracy of delivery time estimates, enhancing user experience, optimizing delivery logistics, and reducing uncertainty for both customers and delivery drivers.
+
+## Drawbacks 
+Lack of Real-Time Data: The dataset does not include real-time traffic, weather conditions, or road closures, all of which significantly impact delivery times. Without this data, the model may struggle to adapt to sudden delays.
+
+Variability in Order Preparation and Delivery: Restaurant preparation times can be unpredictable due to factors like order volume, staffing, and food type. Similarly, driver availability and order batching further complicate accurate predictions.
+
+Regional and Market-Specific Differences: Delivery dynamics vary across different cities and markets due to differences in traffic congestion, restaurant density, and dasher availability, making it difficult to create a one-size-fits-all model.
+
+Business and Operational Changes: DoorDash frequently updates its driver assignment, batching strategies, and operational rules, which can render a static predictive model obsolete if not continuously updated.
+
+Computational and Integration Challenges: Real-time predictions require efficient algorithms to minimize latency. Additionally, integrating external data sources like traffic and weather APIs introduces dependencies and potential maintenance challenges.
+
+
+
 ## Data Description
 
 This table describes the dataset columns and their respective data types.
